@@ -23,7 +23,6 @@ Makefile
 /libltdl
 *.m4
 
-README
 
 /etc/rc-scripts
 

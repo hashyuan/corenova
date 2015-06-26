@@ -99,7 +99,7 @@ public:
 	SimpleAsyncConsumer( const std::string& brokerURI,
 		                 const std::string& destURI,
 		                 bool useTopic = false,
-		                 bool clientAck = false ) {
+		                 bool clientAck = false ) throw (){
 
 		this->connection = NULL;
 		this->session = NULL;
@@ -113,7 +113,7 @@ public:
 		MessageHandleCallbackFunc = NULL;
 	}
 
-	virtual ~SimpleAsyncConsumer(){
+	virtual ~SimpleAsyncConsumer() throw (){
 		this->cleanup();
 	}
     
@@ -189,7 +189,7 @@ public:
 	}
 
     // Called from the consumer since this class is a registered MessageListener.
-    virtual void onMessage( const Message* message ) {
+    virtual void onMessage( const Message* message ) throw (){
 
 		try {
 

@@ -580,6 +580,7 @@ if test x$ACTIVEMQ_HEADERS_DIR != x; then
 	build_activemq=true
 
 	AC_LANG_PUSH([C++])
+	ac_link='$CXX -o conftest$ac_exeext conftest.$ac_ext $CXXFLAGS $CPPFLAGS $LDFLAGS $LIBS >&5'
 	
     # Perform some tests on C++.
     

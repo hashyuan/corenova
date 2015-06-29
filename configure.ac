@@ -571,7 +571,7 @@ if test x$ACTIVEMQ_HEADERS_DIR != x; then
 	ACTIVEMQ_CFLAGS="-I${ACTIVEMQ_HEADERS_DIR}"
 	AC_SUBST(ACTIVEMQ_CFLAGS)
 
-	LIBACTIVEMQ="-lactivemq-cpp"
+	LIBACTIVEMQ="-l:libactivemq-cpp.so.14"
 	AC_SUBST(LIBACTIVEMQ)
 	
 	CPPFLAGS="${CPPFLAGS} -I${ACTIVEMQ_HEADERS_DIR}"
@@ -607,6 +607,7 @@ if test x$ACTIVEMQ_HEADERS_DIR != x; then
 		  AC_MSG_RESULT([
 		  -----------------------------
 		  ActiveMQ LIB Link Test Failed
+                  activemq libray shoule be activemq-cpp-3.4.1 and above
 		  -----------------------------
 		  ])
 		  build_activemq=false		  
